@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration form</title>
+    <style>
+        *{
+           margin: 00;
+           padding: 00;
+           background-color: silver;
+        }
+
+        html,body{
+            overflow-x: hidden;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .navigation-bar{
+            width: 100%;
+            height:4rem;
+            background-color: #FBE4D6;
+        } 
+
+        marquee{
+            font-size: 2rem; 
+            height: 4rem;
+            color: rgb(173, 41, 41);
+        }
+
+
+        .hero-content{
+            background: url(Company\ Profile\ Presentation.jpg);
+            background-size: cover;
+            width: 100%;
+            height: 45rem;
+            z-index: 1;
+        } 
+      
+        .form{
+            height: 30rem;
+            width:60%;
+            background-color: white;
+            display: flex;
+            border: 1px solid white 8px;
+            border-radius: 15px;
+            top: 5rem;
+        }
+
+        .body{
+           width: 100%;
+           height: 40rem;
+           display: flex;
+           justify-content: center;
+           align-items: center;
+        }
+
+        .img{
+            width: 50%;
+            background: url(fun.png);
+            background-size: cover ;
+            border-left: 1px solid white 8px;
+            border-top-left-radius: 15px;
+            border-bottom-left-radius: 15px;
+        }
+
+        .inner-form{
+            width: 50%;
+            background-size: cover ;
+            border-left: 1px solid white 8px;
+            border-top-right-radius: 15px;
+            border-bottom-right-radius: 15px;
+            background-color:white;
+           
+        }
+
+        .inner-form span{
+            margin-left: 40px;
+           
+            
+        }
+
+        label{
+            background-color: white;
+            font-weight: 700;
+            font-size: 1.5rem;
+        }
+
+         input{
+            width: 80%;
+            font-size: 1rem;
+            height: 1rem;
+            margin-left: 25px; 
+            background-color: white; 
+        }
+
+        label{
+            font-size: 1.2rem;
+            margin-left: 25px;
+        }
+
+        .name{
+            position: relative;
+            top: 10px;
+        }
+
+        .label1{
+            font-size: 1.2rem;
+            margin-left: 25px;
+        }
+
+        .E-mail{
+            position: relative;
+            top: 20px;
+        }
+
+        .label2{
+            font-size: 1.2rem;
+            margin-left: 25px;
+        }
+
+        
+        .phone{
+            position: relative;
+            top: 40px;
+        }
+
+        .label3{
+            position: relative;
+            top: 174px;
+            color: black;
+            font-size: 1rem;
+            left: 50px;
+            width: 17rem;
+            z-index: 2;
+        }
+
+        .check{
+            position: relative;
+            top: 190px;
+            font-size: 0.5rem;
+            left: -35%;
+        }
+
+        .label4{
+            position: relative;
+            top: -8rem;
+            left: -5rem;
+            width: 3rem;
+            z-index: 1;
+        }
+
+        #checkin{
+            position: relative;
+            top: -6.15rem;
+            left: -6rem;
+            z-index: 1;
+        }
+
+        .label5{
+            position: relative;
+            top: -12rem;
+            left: 7rem;
+            z-index: 1;
+        }
+
+        #checkout{
+            position: relative;
+            top: -10rem;
+            left: 5rem;
+            
+        }
+
+        .buttons{
+            position: absolute;
+            top: 76rem;
+            left: 60%;
+            width: 7rem;
+            height: 2rem;
+            background-color: white;
+        }  
+
+        button{
+            position: relative;
+            top: -200%;
+            left: 20px;
+            width: 7rem;
+            height: 2rem;
+            border-radius: 10px;
+            background-color: rgb(25, 197, 25);
+        }
+
+        input{
+            border-radius: 7px;
+            text-align: left;
+            padding-left: 5px;
+        }
+
+        @media(max-width:768px){
+           body{
+            overflow-x: hidden;
+           }
+
+            .navigation-bar{
+            width: 100%;
+            height:1.5rem;
+            background-color: #FBE4D6;
+        } 
+
+        marquee{
+            font-size: 1rem; 
+            height: 1.5rem;
+             color: rgb(173, 41, 41);
+        }
+
+
+        .hero-content{
+            background: url(Company\ Profile\ Presentation.jpg);
+            background-size: cover;
+            width: 100%;
+            height: 15rem;
+            z-index: 1;
+        } 
+
+        .form{
+            position: absolute;
+            height: 15rem;
+            width:60%;
+            border-radius: 15px;
+            top: 20rem;
+        }
+
+        h3{
+            position: absolute;
+            top: -4rem;
+            z-index: 2;
+            left: 00rem;
+            width: 12rem;
+            background-color: silver;
+        }
+
+        p{
+            position: absolute;
+            top: 37rem;
+            left: 15%;
+        }
+
+        .body{
+           width: 100%;
+           height: 10rem;
+           top: 18rem;
+        }
+
+        .img{
+            width: 50%;
+            border-left: 1px solid white 8px;
+            border-top-left-radius: 15px;
+            border-bottom-left-radius: 15px;
+        }
+
+        .inner-form{
+            width: 50%;
+        }
+
+        label{
+            background-color: white;
+            font-size: 0.7rem;
+        }
+
+         input{
+            width: 80%;
+            font-size:0.7rem;
+            height: 1rem;
+            margin-left: 5px; 
+            background-color: white; 
+        }
+
+        label{
+            font-size:0.7rem; 
+            margin-left: 5px;
+        }
+
+        .name{
+            font-size:0.7rem; 
+            margin-left: 5px;
+        }
+
+        .label1{
+            font-size:0.7rem; 
+            margin-left: 5px;
+        }
+
+        .E-mail{
+            position: relative;
+            top: 1rem;
+            font-size:0.7rem; 
+            margin-left: 5px;
+        }
+
+        .label2{
+            font-size:0.7rem; 
+            margin-left: 5px; 
+        }
+
+        .phone{
+            position: relative;
+            top: 1.5rem;
+            font-size:0.7rem; 
+            margin-left: 5px;
+        }
+
+        .label3{
+            position: relative;
+            top: 4.5rem;
+            font-size:0.7rem; 
+            margin-left: -20px;
+            width: 5rem;
+        }
+
+        .check{
+            position: relative;
+            top: 5.5rem;
+            font-size:0.7rem; 
+            margin-left: 5px;
+        }
+
+        .label4{
+            position: absolute;
+            top: -1rem;
+            font-size:0.7rem; 
+            margin-left: 85px;
+            z-index: 1;
+        }
+
+        #checkin{
+            position: absolute;
+            top: 1rem;
+            left:5px;
+            width: 1rem;
+            z-index: 1;
+        }
+
+        .label5{
+            position: absolute;
+            top: -1rem;
+            width: 3.5rem;
+            font-size:0.7rem; 
+            margin-left: -40px;
+            z-index: 1;
+        }
+
+        #checkout{
+            position: absolute;
+            top: 1rem;
+            left:70px;
+            width: 1rem;
+            z-index: 1;
+            
+        }
+
+        .buttons{
+            position: absolute;
+            top: 9rem;
+            left: 50%;
+            width:em;
+            height:rem;
+            background-color: white;
+            z-index: 1;
+        }  
+
+        button{
+            position: absolute;
+            top: 4.2rem;
+            left: 2rem;
+            width: 4rem;
+            height:1.5rem;
+            font-size: 0.7rem;
+            
+        }
+
+        input{
+            border-radius: 7px;
+            text-align: left;
+            padding-left: 5px;
+        }
+
+        }
+    </style>
+</head>
+<body>
+    <div class="navigation-bar">
+        <div class="home"></div>
+        <div class="more-info"></div>
+        <marquee><b>REGISTRATIONS OPEN!!!</b></marquee>
+    </div>
+    <header class="hero">
+        <div class="hero-content">
+        </div>
+    </header>
+
+    <div class="body">
+        <div class="form">
+        <div class="img"></div >
+        <div class="inner-form">
+            <form style="display: flex; flex-direction: column; justify-content: space-between; background-color: white">
+                <h3 style="background-color: white;  margin-left: 25px; font-size: 2rem; margin-top: 15px;">Register Here</h3>
+               <div class="name" style="background-color: white;"><label for="name">Name</label><br>
+                <input id="name" type="text" placeholder="Enter your name">
+               </div>
+
+               <div class="E-mail" style="background-color: white;"><label class="label1" for="E-mail">E-mail</label><br>
+                <input id="E-mail" type="email" placeholder="Enter your E-mail">
+               </div>
+
+               <div class="phone" style="background-color: white;"><label class="label2" for="phone">Mobile no:</label><br>
+                <input id="phone" type="number" placeholder="Enter your Mobilr no">
+               </div>
+               <input type="checkbox" class="check" id="check" placeholder="Do you study in same institute">
+               <label for="check" class="label3">Do you study in same institute</label>
+                <div class="buttons">
+                    <label class="label4" for="checkin">Check-in Time:</label>
+                    <input type="datetime-local" id="checkin" name="checkin" required>
+                    <label class="label5" for="checkout">Check-out Time:</label>
+                    <input type="datetime-local" id="checkout" name="checkout" required>
+                   <button type="submit" class="button">REGISTER</button>
+
+               </div>
+            </form>
+        </div>
+        </div>
+     
+    
+    </div>
+    </div>
+
+    <p style="text-align: center;">&copy; 2025 College Event Management. All Rights Reserved.</p>
+
+    <script>
+function validate() {
+    const checkin = document.getElementById('checkin').value;
+    const checkout = document.getElementById('checkout').value;
+
+    if (new Date(checkout) <= new Date(checkin)) {
+        alert("Check-out time must be after check-in time.");
+        return false;
+    }
+    return true;
+}
+    </script>
+</body>
+</html>
